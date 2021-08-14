@@ -25,3 +25,4 @@ const isCheched = true,
 
 console.log(isCheched || !isClose);
 
+console.log('test');

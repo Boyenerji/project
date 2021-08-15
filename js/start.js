@@ -1,14 +1,7 @@
 "use strict";
 
-let number = 5;
-const leftBorderWidth = 1;
-
-
-
-
-
-let incr = 10,
-    decr = 10;
+// let incr = 10,
+//     decr = 10;
 
 // ++incr;
 // --decr;

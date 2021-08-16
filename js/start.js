@@ -18,40 +18,40 @@
 // console.log(isCheched || !isClose);
 
 
-const numberOfFilms = +prompt('Сколько фильмов вы просмотрели?', '');
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
+// const numberOfFilms = +prompt('Сколько фильмов вы просмотрели?', '');
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
 
-console.log(personalMovieDB.count);
+// console.log(personalMovieDB.count);
 
 
-for (let i = 0; i < 2; i++) {
-    const a = prompt('Один из последних фильмов?', ''),
-        b = prompt('На сколько оцените его?', '');
+// for (let i = 0; i < 2; i++) {
+//     const a = prompt('Один из последних фильмов?', ''),
+//         b = prompt('На сколько оцените его?', '');
 
-    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-        personalMovieDB.movies[a] = b;
-        console.log('Done');
-    } else {
-        console.log('Error');
-        i--;
-    }
-}
+//     if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+//         personalMovieDB.movies[a] = b;
+//         console.log('Done');
+//     } else {
+//         console.log('Error');
+//         i--;
+//     }
+// }
 
-if (personalMovieDB.count < 10) {
-    console.log('Просмотрено мало фильмов');
-} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-    console.log('Вы классический зритель');
-} else if (personalMovieDB.count >= 30) {
-    console.log('Вы киноман');
-} else {
-    console.log('Ошибка');
-}
+// if (personalMovieDB.count < 10) {
+//     console.log('Просмотрено мало фильмов');
+// } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+//     console.log('Вы классический зритель');
+// } else if (personalMovieDB.count >= 30) {
+//     console.log('Вы киноман');
+// } else {
+//     console.log('Ошибка');
+// }
 
 
 // if (4 == 9) {
@@ -116,3 +116,42 @@ if (personalMovieDB.count < 10) {
 //     }
 //     console.log(i);  
 // }
+
+
+function showMessage(text) {
+    console.log(text);
+}
+
+showMessage('Hello world');
+
+
+// function calc(a, b) {
+//     return (a + b);
+// }
+
+// console.log(calc(4,3));
+// console.log(calc(5,6));
+// console.log(calc(10,6));
+
+
+function ret() {
+    let num = 50;
+    return num;
+}
+
+const test = ret();
+console.log(test);
+
+const logger = function() {
+    console.log('Hello');
+};
+
+logger();
+
+
+const calc = (a, b) => a + b;
+
+
+const calcTwo = (a, b) => {
+    return a + b;
+};

@@ -134,24 +134,45 @@ showMessage('Hello world');
 // console.log(calc(10,6));
 
 
-function ret() {
-    let num = 50;
-    return num;
-}
+// function ret() {
+//     let num = 50;
+//     return num;
+// }
 
-const test = ret();
-console.log(test);
+// const test = ret();
+// console.log(test);
 
-const logger = function() {
-    console.log('Hello');
-};
+// const logger = function() {
+//     console.log('Hello');
+// };
 
-logger();
-
-
-const calc = (a, b) => a + b;
+// logger();
 
 
-const calcTwo = (a, b) => {
-    return a + b;
-};
+// const calc = (a, b) => a + b;
+
+
+// const calcTwo = (a, b) => {
+//     return a + b;
+// };
+
+
+// const str = 'test';
+
+// console.log(str.length);
+
+
+const fruit = 'Some fruit';
+console.log(fruit.indexOf('fruit'));
+
+const logg = 'Hello world';
+console.log(logg.slice(6,11)); // Выбрать с шестой до 11 позиции
+console.log(logg.substr(6,11)); // Выбрать с шестой позиции 5 символов
+
+
+const num = 12.2;
+console.log(Math.round(num));
+
+const test = '12.2px';
+console.log(parseInt(test));
+console.log(parseFloat(test));

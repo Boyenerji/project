@@ -18,30 +18,80 @@
 // console.log(isCheched || !isClose);
 
 
-// const numberOfFilms = +prompt('Сколько фильмов вы просмотрели?', '');
-// const personalMovieDB = {
-//     count: numberOfFilms,
-//     movies: {},
-//     actors: {},
-//     genres: [],
-//     privat: false
-// };
+let numberOfFilms;
 
-// console.log(personalMovieDB.count);
+function start() {
+    numberOfFilms = +prompt('Сколько фильмов вы просмотрели?', '');
+
+    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+        numberOfFilms = +prompt('Сколько фильмов вы просмотрели?', '');
+    }
+}
+
+// start();
 
 
-// for (let i = 0; i < 2; i++) {
-//     const a = prompt('Один из последних фильмов?', ''),
-//         b = prompt('На сколько оцените его?', '');
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-//     if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-//         personalMovieDB.movies[a] = b;
-//         console.log('Done');
-//     } else {
-//         console.log('Error');
-//         i--;
+
+
+function rememberMyFilms() {
+    for (let i = 0; i < 2; i++) {
+        const a = prompt('Один из последних фильмов?', ''),
+            b = prompt('На сколько оцените его?', '');
+
+        if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+            personalMovieDB.movies[a] = b;
+            console.log('Done');
+        } else {
+            console.log('Error');
+            i--;
+        }
+    }
+}
+
+
+// rememberMyFilms();
+
+
+
+function detectPersonalLevel() {
+    if (personalMovieDB.count < 10) {
+        console.log('Просмотрено мало фильмов');
+    } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+        console.log('Вы классический зритель');
+    } else if (personalMovieDB.count >= 30) {
+        console.log('Вы киноман');
+    } else {
+        console.log('Ошибка');
+    }
+}
+
+// detectPersonalLevel();
+
+
+// function showMyDB(hidden) {
+//     if (!hidden) {
+//         console.log(personalMovieDB);
 //     }
 // }
+
+// showMyDB(personalMovieDB.privat);
+
+
+// function writeYourGenres() {
+//     for (let i = 1; i <= 3; i++) {
+//         personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр по номером ${i}`); 
+//     }
+// }
+
+// writeYourGenres();
 
 // if (personalMovieDB.count < 10) {
 //     console.log('Просмотрено мало фильмов');
@@ -118,11 +168,11 @@
 // }
 
 
-function showMessage(text) {
-    console.log(text);
-}
+// function showMessage(text) {
+//     console.log(text);
+// }
 
-showMessage('Hello world');
+// showMessage('Hello world');
 
 
 // function calc(a, b) {
@@ -162,17 +212,73 @@ showMessage('Hello world');
 // console.log(str.length);
 
 
-const fruit = 'Some fruit';
-console.log(fruit.indexOf('fruit'));
+// const fruit = 'Some fruit';
+// console.log(fruit.indexOf('fruit'));
 
-const logg = 'Hello world';
-console.log(logg.slice(6,11)); // Выбрать с шестой до 11 позиции
-console.log(logg.substr(6,11)); // Выбрать с шестой позиции 5 символов
+// const logg = 'Hello world';
+// console.log(logg.slice(6, 11)); // Выбрать с шестой до 11 позиции
+// console.log(logg.substr(6, 11)); // Выбрать с шестой позиции 5 символов
 
 
-const num = 12.2;
-console.log(Math.round(num));
+// const num = 12.2;
+// console.log(Math.round(num));
 
-const test = '12.2px';
-console.log(parseInt(test));
-console.log(parseFloat(test));
+// const test = '12.2px';
+// console.log(parseInt(test));
+// console.log(parseFloat(test));
+
+
+const options = {
+    name: 'test',
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    },
+    makeTest: function() {
+        console.log('Test');
+    }
+};
+
+// options.makeTest();
+
+const {border, bg} = options.colors;
+console.log(border);
+// console.log(Object.keys(options).length);
+
+// console.log(options.name);
+
+// delete options.name;
+
+// console.log(options);
+
+
+const objWords = {
+    name: 'test',
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    },
+    makeTest: function() {
+        console.log('Test');
+    }
+};
+
+// let counter = 0;
+// for (let key in options) {
+//     if (typeof(options[key]) === 'object') {
+//         for (let i in options[key]) {
+//             console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
+//             counter++;  
+//         }
+//     } else {
+//         console.log(`Свойство ${key} имеет значение ${options[key]}`);
+//         counter++;
+//     }
+// }
+
+// console.log(counter);
+
